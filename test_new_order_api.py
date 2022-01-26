@@ -72,6 +72,7 @@ def test_create_successful_buy_order():
     assert response.headers["Content-Type"] == "application/json"
     assert response_body['exchange'] == 'gemini'
     assert response_body['side'] == 'buy'
+    assert response_body['is_live'] == True
     print(response_body)
 
 
